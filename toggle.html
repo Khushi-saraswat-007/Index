@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Light Mode</title>
+</head>
+
+<body>
+
+    <h1 id="heading">Change The Background Color</h1>
+
+    <button id="mode-btn">Dark Mode</button>
+
+    <script>
+
+        const button = document.querySelector("#mode-btn");
+        const heading = document.querySelector("#heading");
+
+        let darkMode = false;
+
+        button.addEventListener("click", function () {
+
+            if (darkMode == false) {
+
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+
+                heading.style.color = "white";
+
+                button.style.backgroundColor = "white";
+                button.style.color = "black";
+
+                button.innerText = "Light Mode";
+
+                darkMode = true;
+
+            } 
+            else {
+
+                document.body.style.backgroundColor = "white";
+                document.body.style.color = "black";
+
+                heading.style.color = "black";
+
+                button.style.backgroundColor = "black";
+                button.style.color = "white";
+
+                button.innerText = "Dark Mode";
+
+                darkMode = false;
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
